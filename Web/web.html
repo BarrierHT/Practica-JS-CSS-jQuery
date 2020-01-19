@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width">
+	<title>Proyecto Web</title>
+	
+	<link rel="stylesheet" href="fonts/style.css">		<!-- ICONOS -->
+	<link rel="stylesheet" href="estilos.css"> 			<!-- CSS -->
+
+	<script src="jQuery/jquery.js"></script>			<!-- jQuery -->
+	<script src="jQuery/ui.js"></script>				<!-- jQuery UI -->
+	<link rel="stylesheet" href="jQuery/ui1.css">
+	<link rel="stylesheet" href="jQuery/ui2.css">
+	<link rel="stylesheet" href="jQuery/ui3.css">
+	
+	<script src="java.js"></script>						<!-- Javascript -->
+	
+
+</head>
+<body>
+	<!-- ==0 -->
+<style type="text/css">
+		#pop_up{
+				position:absolute;
+				z-index:100;
+				background:rgba(255,255,255,.8);
+				width:98.2%;
+				height:100%;
+		}
+		#pop_up div{
+					width:30%;
+					height:auto;
+					border: solid #000 3px;			/* RELOJ */
+					position:absolute;
+					left:38%;
+					top:38%;
+					border-radius:20px;
+					overflow:auto;
+		}
+		#pop_up button{
+			width:15%;
+			height:15%;
+			float:right;  
+		}
+</style>
+
+<div id="pop_up" style="display: none;">
+	<button> Cerrar </button>
+	<div align="center">
+		<h2>Horario</h2>
+		<h3>Fecha</h3>
+	</div>
+</div>
+
+<div id="temas">
+	<span class="icon-images actual" id="tema_aurora" title="Tema Aurora"></span>		<!-- Predeterminado -->
+	<span class="icon-images " id="tema_blanco" title="Tema Blanco"></span>
+	<span class="icon-images " id="tema_azul" title="Tema Azul"></span>
+</div>
+
+	<section id="main">
+			<header>
+				<div id="cabecera">
+					<h1>PRACTICANDO UN PROYECTO WEB</h1>
+						<div id="busqueda">
+						<span class="icon-search"></span>
+						<input type="text" placeholder="Digite su busqueda"> 	
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="C:/Users/User/Desktop/Proyecto/Web/web.html">Inicio <span class="icon-home"></span></a>  </li>
+					
+					<li id="sublista"> Actividades <span class="icon-dice"></span>
+						<ul >
+							<li><a href="#calculadora">Calculadora <span class="icon-calculator"></span> </a> </li>
+							<li><a href="#rel" id="reloj">Reloj <span class="icon-clock"></span></a>  </li>
+							<li><a href="#juego random">Juego Random <span class="icon-dice"></span></a> </li>
+						</ul>	
+					</li>
+						
+						<li><a href="contacto.html">Contacto <span class="icon-phone"></span></a>  </li>
+						<li><a href="barrier.html" id="usuario"> Barrier </a> <!-- SPAN con icono  --> </li>
+					</ul>	
+				</nav>
+			</header>
+	
+		<div id="slider">
+			<img src="../aurora.jpg" alt="No se encontro la imagen" id="imagen_slider">
+			<div id="left"></div>
+			<div id="right"></div>
+			<div class="selector" id="0" title="Aurora" onclick="selector(this.id);"></div>
+			<div class="selector" id="1" title="Atardecer" onclick="selector(this.id);"></div>
+			<div class="selector" id="2" title="Bosque" onclick="selector(this.id);"></div>
+			<div class="selector" id="3" title="Lava" onclick="selector(this.id);"></div>
+			<div class="selector" id="4" title="Tornado" onclick="selector(this.id);"></div>
+		</div>
+
+	<section id="cuerpo">
+			
+			<section id="post">
+					<article class="articulo">
+
+						<span> Lorem ipsum </span>
+						
+						<time datetime="04/01/2020">Publicado el 04/01/2020</time>
+						<div class="caja_comentarios">
+							<a href="#comentarios">73 comentarios</a>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat illum obcaecati consectetur reprehenderit eos fugit aliquam aut quas officia nulla iste a quis asperiores numquam facilis ad quam perferendis, quos perspiciatis repellendus! Blanditiis quo nisi suscipit obcaecati quibusdam, debitis quod. Fugiat tempore, at blanditiis praesentium nesciunt eligendi facilis, reiciendis commodi aspernatur iste? Quidem commodi dolorem quia, aperiam facilis consequatur adipisci deleniti veniam incidunt? Nobis illo, dolor ut ea, iste mollitia.
+						</p>
+								<a href="#" class="leer">Leer Más</a>
+					</article>
+					<article class="articulo">
+
+						<span> Lorem ipsum </span>
+						
+						<time datetime="05/01/2020">Publicado el 05/01/2020</time>
+						<div class="caja_comentarios">
+							<a href="#comentarios">37 comentarios</a>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, numquam. Provident repellendus repudiandae neque quia incidunt. Libero unde quas facere culpa modi impedit adipisci molestias odio et rerum blanditiis ex atque officiis, enim, at commodi, nobis, labore. Accusantium, vero, molestias.
+						</p>
+								<a href="#" class="leer">Leer Más</a>
+					</article>
+				
+				<article class="articulo">
+
+						<span> Lorem ipsum </span>
+						
+						<time datetime="05/01/2020">Publicado el 05/01/2020</time>
+						<div class="caja_comentarios">
+							<a href="#comentarios">21 comentarios</a>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, possimus reiciendis consequatur voluptas deserunt dolores id. Tenetur porro rerum voluptate delectus sed explicabo labore ducimus aut excepturi, maxime inventore non, ad, minima harum corrupti officiis exercitationem possimus provident fuga. Sunt perferendis repellendus, saepe atque praesentium deserunt, earum ut dolor, quisquam assumenda aut voluptas fuga enim accusantium debitis ipsa tempora dicta vitae eum architecto inventore natus facere sint obcaecati nihil. Saepe sed fugiat soluta dolor ratione aliquid corporis, reiciendis iste impedit quam quisquam, tempora, culpa, magni vitae reprehenderit cumque eveniet. Illum id molestias optio odit vitae hic error quas porro possimus quos deserunt, placeat sequi illo facere consequatur, aspernatur repudiandae fugiat impedit, vel voluptates iure necessitatibus explicabo. Eaque iste adipisci, ratione. Nisi, voluptatibus, error?
+						</p>
+								<a href="#" class="leer">Leer Más</a>
+					</article>
+	
+			</section>
+
+			<aside id="sidebar">
+				<span>¿Qué es esto?</span>
+				<img src="../remolino.jpg" alt="No se encontro la imagen">
+				<blockquote>
+					Un remolino es un gran volumen de agua giratorio producido por mareas oceánicas. En la imaginación popular, y tan sólo rara vez en la realidad, pueden tener el peligroso efecto de destruir embarcaciones. Los remolinos marinos son cuerpos de agua que giran rápidamente sobre sí mismos.
+				</blockquote>
+
+
+				<form action="" id="sesion">
+					<h2>Identificate</h2>
+					<label for="name">Nombre</label> 
+					<input type="text" placeholder="Nombre" name="name">  
+					<label for="email">Correo (Opcional)</label> 
+					<input type="text" placeholder="Correo" name="email">	
+					<label for="contra">Contraseña</label> 
+					<input type="password" placeholder="Contraseña" name="contra"> <br> <br>
+					<button type="submit">Enviar</button>
+				</form>
+			</aside>
+		
+		</section>
+
+	<footer>
+		<h2>Barrier, todos los derechos reservados [PROYECTO WEB]</h2>
+		<button id="scroll"> <h3>Comienzo de la Página</h3> </button>
+	</footer>
+
+	</section>
+
+	
+</body>
+</html>
